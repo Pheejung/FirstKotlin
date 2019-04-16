@@ -101,4 +101,33 @@ class KotlinTest {
         println(list2.flatMap { it.toList() })
     }
 
+    @Test
+    fun testExtended() {
+        var str = "Hello"
+        println(str.lastString())
+    }
+
+    @Test
+    fun testNullCheck() {
+        // println(strLen1(null))
+        println(strLen1("apple"))
+        println(strLen2("apple"))
+        println(strLen2(null))
+        println(strLast1("apple"))
+        println(strLast1(null))
+        println(strLast2(null))
+
+        println(strPrintLen("apple"))
+        println(strPrintLen(null))
+    }
+
+    @Test
+    fun testTruck() {
+        val t1 = Truck(1, "Kim")
+        val t2 = Truck(2, "Kim")
+        val t3 = Truck(1, "Yoo")
+
+        println(t1 == t2)
+        println(t1 == t3)
+    }
 }

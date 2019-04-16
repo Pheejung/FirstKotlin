@@ -62,4 +62,14 @@ public class JavaTest {
         // Assert.assertEquals(fruitJava1, fruitJava2);
         Assert.assertEquals(fruitJava1.hashCode(), fruitJava2.hashCode());
     }
+
+    @Test
+    public void testExt() {
+        // String lastString = StringExtKt.lastString("apple");
+        // Assert.assertEquals("e", lastString);
+
+        NPE npe = new NPE();
+        Assert.assertEquals(3, npe.strlen("abc"));
+        Assert.assertEquals(0, npe.strlen(""));
+    }
 }
